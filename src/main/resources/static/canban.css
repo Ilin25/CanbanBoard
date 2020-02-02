@@ -3,6 +3,19 @@ body {
     padding: 0;
 }
 
+table {
+    display: inline-table;
+    margin-top: 3px;
+    border: 1px solid black;
+    width: 16.2%;
+    font-size: 14px;
+}
+
+thead {
+    background: #566475;
+    color: white;
+}
+
 #header {
     background: #5e6073;
     height: 10vh;
@@ -37,26 +50,23 @@ body {
     text-align: center;
 }
 
-.taskTable {
-    display: inline-table;
-    margin-top: 3px;
-    border-collapse: separate;
-    border: 1px solid #5e6073;
-    width: 16.2%;
-    font-size: 14px;
-}
-
-.taskTable thead {
-    background: #5e6073;
-    color: white;
-}
-
-TD TH {
-    border: 1px solid #5e6073;
-}
-
 #footer {
     background: #89a3b2;
     height: 10vh;
+}
+
+.high {
+    background-color: red;
+    color: red;
+}
+
+.mid {
+    background-color: yellow;
+    color: green;
+}
+
+.low {
+    background-color: green;
+    color: yellow;
 }
 

@@ -134,11 +134,8 @@
                 </thead>
                 <tbody>
                 <tr th:each="task : ${tasksByMob_Demob}">
-                    <td th:utext="
-                    ${task.description} + '</br>' +
-                    ${task.kanbanUser.name} + '</br>' + 'c: ' +
-                    ${task.getStartTask()} + '</br>' + 'до: ' +
-                    ${task.getDeadTask()} + '</br>' + '-------------'"></td>
+                    <td th:utext="${task.description}+'</br>'+${task.kanbanUser.name}+'</br>'+'c: '+${task.getStartTask()}+'</br>'+'до: '+${task.getDeadTask()}+'</br>'+'-------------------'">
+                    </td>
                 </tr>
                 </tbody>
             </table>
