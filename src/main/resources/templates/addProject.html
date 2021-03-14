@@ -11,7 +11,7 @@
         <form method="post" th:action="@{/project/add}" th:object="${project}">
             <div>
                 <label>Название проекта</label>
-                <input type="text" th:field="*{description}" id="description">
+                <label for="description"></label><input type="text" th:field="*{description}" id="description">
                 <input type="checkbox" th:field="*{finished}">
             </div>
             <input type="submit" value="Сохранить">

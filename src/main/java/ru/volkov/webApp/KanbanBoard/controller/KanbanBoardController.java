@@ -44,9 +44,7 @@ public class KanbanBoardController {
     }
 
     @PostMapping(value = "/showAllTask")
-    public String showAllTask (
-            Model model,
-            @RequestParam(name = "projectId", required = false) Integer projectId)
+    public String showAllTask (Model model,@RequestParam(name = "projectId", required = false) Integer projectId)
     {
         model.addAttribute("tasks", taskRepository.findAll());
         model.addAttribute("tasksByContract", taskRepository.findTaskByProjectIdAndStage(projectId, ProjectStage.CONTRACT));

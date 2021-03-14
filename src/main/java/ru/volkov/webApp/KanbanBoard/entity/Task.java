@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 @Table (name = "task")
@@ -115,5 +116,16 @@ public class Task implements Serializable {
 
     public void setImportance(TaskImportance importance) {
         this.importance = importance;
+    }
+
+    public String setBackColor(){
+        if (this.importance == TaskImportance.HIGH) { return "#FF4040"; }
+        if (this.importance == TaskImportance.MID) { return "#33CCCC"; }
+        if (this.importance == TaskImportance.LOW) { return "#B9F73E"; } else { return "white"; }
+    }
+
+    public String doDateFormat(LocalDateTime date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        return date.format(formatter);
     }
 }
